@@ -1,0 +1,2103 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <style>
+        /* Hide the page until edited content has loaded, to avoid a flash
+           of the default hardcoded text before it's replaced. Falls back
+           to visible after 1.5s if the content fetch is slow or fails. */
+        html:not(.content-ready) body { opacity: 0; }
+        body { transition: opacity .25s ease; }
+    </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SOZYN | Pre-verified Employment</title>
+
+        <!-- Favicons: files already existed on the server, just weren't linked -->
+        
+        
+        
+        
+        
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#0f1720">
+
+        <!-- SEO -->
+        <meta name="description" content="SOZYN is a pre-verified employment platform connecting jobseekers and employers through verified profiles, streamlined hiring, and trusted workforce intelligence.">
+        <link rel="canonical" href="https://sozyn.co.in/">
+        <meta name="robots" content="index, follow">
+
+        <!-- Social sharing preview (LinkedIn, WhatsApp, X, Facebook) -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="SOZYN">
+        <meta property="og:title" content="SOZYN | Pre-verified Employment">
+        <meta property="og:description" content="Connecting Talent. Creating Opportunities. Verified employment profiles and streamlined hiring for jobseekers and employers.">
+        <meta property="og:url" content="https://sozyn.co.in/">
+        <meta property="og:image" content="https://sozyn.co.in/images/sozyn-logo.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="SOZYN | Pre-verified Employment">
+        <meta name="twitter:description" content="Connecting Talent. Creating Opportunities. Verified employment profiles and streamlined hiring for jobseekers and employers.">
+        <meta name="twitter:image" content="https://sozyn.co.in/images/sozyn-logo.png">
+
+        <!-- Structured data, for richer Google search results -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "SOZYN",
+            "url": "https://sozyn.co.in",
+            "logo": "https://sozyn.co.in/images/sozyn-logo.png",
+            "sameAs": [
+                "https://www.youtube.com/@sozynLLP",
+                "https://www.x.com/mysozyn"
+            ]
+        }
+        </script>
+
+        <!-- Perf: warm up the connections before the files are requested -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+        <!-- Ubuntu is the same typeface Capgemini's own site sets its body copy in, loaded non-blocking -->
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+
+        <!-- Font Awesome loaded non-blocking too, so icons no longer delay first paint -->
+        <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+
+        <noscript>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        </noscript>
+        <style>
+            :root {
+                --cap-blue: #0070ad;
+                --cap-dark-blue: #003057;
+                --text-main: #333;
+                --bg-light: #f4f7f9;
+            }
+    
+            * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Ubuntu', sans-serif; }
+            body { background: #fff; color: var(--text-main); line-height: 1.6; }
+    
+            /* --- Header & Logo Area --- */
+            header { background: var(--cap-dark-blue); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+            .header-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 70px; padding: 0 20px; }
+            
+            .logo img { height: 45px; display: block; }
+            .logo-text { color: #fff; font-size: 1.8rem; font-weight: 700; letter-spacing: 2px; margin-left: 10px; }
+    
+            /* --- Ticker --- */
+            .ticker-container { background: #00213a; color: #fff; padding: 5px 0; font-size: 0.8rem; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .ticker-track { display: flex; white-space: nowrap; animation: ticker 25s linear infinite; }
+            .ticker-item { padding: 0 30px; }
+            @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+    
+            /* This centers the entire site and gives it a clean background */
+    body {
+        background-color: #e9ecef;
+        overflow-x: hidden;
+    }
+    
+    #page-wrapper {
+        width: 100%;
+        max-width: 1400px; /* This matches your header-container max-width */
+        margin: 0 auto;
+        background: #fff; /* Keeps the inside of the site white */
+        box-shadow: 0 0 50px rgba(0,0,0,0.1); /* Optional: adds a premium shadow to the edges */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Ensure the header and footer now fill 100% of the WRAPPER, not the screen */
+    header, footer, .ticker-container {
+        width: 100%;
+    }
+    
+    main {
+        flex: 1;
+    }
+
+.logo-area img {
+ 
+    height: 35px !important; 
+    width: auto;
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), filter 0.3s ease;
+    will-change: transform;
+    justify-content: left;
+}
+
+/* Detects hover on the parent anchor tag and shifts the logo image forward */
+.logo-area a:hover img {
+    transform: scale(1.08) translateX(4px); /* Moves towards the cursor/right side smoothly */
+    filter: drop-shadow(0 2px 8px rgba(0, 112, 173, 0.35)); /* Adds a slight interactive glow */
+}
+/* --- High-Conversion Poster Card Slider (Inspired by image_0c0cbf.png) --- */
+.promo-slider-wrapper {
+    position: relative;
+    width: 100%;
+    background: #00213a; /* Deep tech base */
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 30px 70px rgba(0, 33, 58, 0.25);
+}
+
+.promo-slider {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+}
+
+.promo-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically so leftover space splits evenly instead of stacking above it */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
+}
+
+/* Specific background bindings utilizing your design assets as rich wallpaper graphics */
+.slide-jobseeker {
+    background-image: linear-gradient(to bottom, rgba(0,18,38,0.2), rgba(0,18,38,0.95)), url('images/Untitled design.png');
+    background-color: #001226;
+}
+
+.slide-employer {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(0,48,87,0.95)), url('images/Untitled design (1).png');
+    background-color: #ffffff;
+    background-size: contain; /* Keeps white logo panel from clipping awkwardly */
+}
+
+.promo-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Floating Glassmorphic Control Panel Overlay */
+.promo-overlay-card {
+    margin: 30px;
+    padding: 35px 40px;
+    background: rgba(0, 48, 87, 0.45);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transform: translateY(20px);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.promo-slide.active .promo-overlay-card {
+    transform: translateY(0);
+}
+
+.promo-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--cap-blue);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.promo-overlay-card h2 {
+    color: #ffffff !important;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.promo-overlay-card p {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    max-width: 750px;
+}
+
+/* Quick-Action Inline Footer Layout */
+.promo-action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Premium Cyan Accent Call To Action Button */
+.btn-cyan-action {
+    background: #00f2fe;
+    color: #003057;
+    padding: 14px 35px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 242, 254, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-cyan-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0, 242, 254, 0.5);
+    background: #ffffff;
+}
+
+/* Razorpay Style Clean Underline Header Tabs */
+.promo-tabs {
+    display: flex;
+    background: #001c32;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.promo-tab {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.promo-tab:hover {
+    color: #00f2fe;
+    background: rgba(255,255,255,0.02);
+}
+
+.promo-tab.active {
+    color: #ffffff;
+    background: rgba(255,255,255,0.05);
+}
+
+.promo-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #00f2fe;
+    transition: width 0.3s ease;
+}
+
+.promo-tab.active::after {
+    width: 100%;
+}
+
+.promo-tab.active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #ffffff;
+    z-index: 5;
+    animation: posterProgress 5s linear forwards;
+}
+
+@keyframes posterProgress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.promo-slider-wrapper:hover .promo-tab.active::before {
+    animation-play-state: paused;
+}
+
+/* Mobile Layout Collapse Optimization */
+@media (max-width: 768px) {
+    .promo-slider { height: 400px; }
+    .promo-overlay-card { margin: 15px; padding: 20px; }
+    .promo-overlay-card h2 { font-size: 1.6rem; }
+    .promo-overlay-card p { font-size: 0.95rem; margin-bottom: 15px; }
+    .promo-action-row { flex-direction: column; align-items: stretch; text-align: center; }
+    .promo-tabs { flex-direction: column; }
+}
+/* OPEN STATE */
+.dropdown.open .dropdown-menu {
+    max-height: 300px;
+}
+            .dropdown-menu li a { color: var(--cap-dark-blue) !important; padding: 10px 20px; display: block; }
+            .dropdown-menu li a:hover { background: var(--bg-light); color: var(--cap-blue) !important; }
+            .arrow { font-size: 0.7rem; margin-left: 5px; }
+    
+            /* --- Buttons --- */
+            .login-actions { display: flex; gap: 10px; }
+            .login-btn { padding: 8px 16px; border-radius: 25px; border: 2px solid var(--cap-blue); cursor: pointer; font-weight: 600; transition: 0.3s; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 6px; }
+            .login-btn i { font-size: 0.85rem; }
+            .employer-btn { background: var(--cap-blue); color: #fff; }
+            .candidate-btn { background: transparent; color: #fff; border-color: #fff; }
+            .login-btn:hover { background: #fff; color: var(--cap-dark-blue); border-color: #fff; }
+    
+            /* --- Hero Section --- */
+            .hero { padding: 20px 20px; max-width: 1200px; margin: 0 auto; }
+            .hero-content h1 { font-size: 2.5rem; color: var(--cap-dark-blue); margin-top: 40px; position: relative; display: inline-block; }
+            .hero-content h1::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: var(--cap-blue); }
+            .hero-eyebrow { color: var(--cap-blue); font-weight: 700; text-transform: uppercase; margin-top: 25px; letter-spacing: 1px; }
+            .hero-subtitle { color: #666; font-size: 1.05rem; margin: 20px 0; max-width: 900px; }
+            
+            .hero-buttons { display: flex; gap: 15px; margin-top: 25px; }
+            .btn-primary { background: var(--cap-blue); color: #fff; padding: 12px 30px; border-radius: 30px; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
+            .btn-secondary { background: var(--cap-dark-blue); color: #fff; padding: 12px 30px; border-radius: 30px; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
+            .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,112,173,0.3); }
+    
+            /* --- Sections Display --- */
+            #main-content, #policy-content, #services-content, #overview-content, #founder-message-content, #blog-content, #pricing-content {
+                animation: fadeIn 0.5s ease;
+            }
+            @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+            .back-home { background: none; border: none; color: var(--cap-blue); font-weight: 700; cursor: pointer; margin-bottom: 20px; }
+    
+            /* --- Services Grid --- */
+            .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
+            .service-card { padding: 40px; background: var(--bg-light); border-bottom: 4px solid var(--cap-blue); transition: 0.3s; }
+            .service-card:hover { background: var(--cap-dark-blue); color: #fff; transform: translateY(-5px); }
+            .service-card i { font-size: 2rem; color: var(--cap-blue); margin-bottom: 15px; }
+            .service-card:hover i { color: #fff; }
+    
+            /* --- Pricing --- */
+            .pricing-tabs { display: flex; justify-content: center; gap: 10px; margin: 30px 0; }
+            .pricing-tab { padding: 10px 30px; border: 1px solid #ddd; background: #fff; cursor: pointer; border-radius: 20px; font-weight: 600; }
+            .pricing-tab.active { background: var(--cap-blue); color: #fff; border-color: var(--cap-blue); }
+            .pricing-grid { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 40px; }
+            .pricing-card { width: 300px; padding: 40px 30px; border: 1px solid #eee; text-align: center; background: #fff; }
+            .pricing-card.featured { border: 2px solid var(--cap-blue); position: relative; }
+            .price { font-size: 2.5rem; font-weight: 700; margin: 20px 0; color: var(--cap-dark-blue); }
+            .pricing-card ul { list-style: none; text-align: left; margin-bottom: 25px; font-size: 0.9rem; }
+            .pricing-card li { margin-bottom: 10px; }
+            .price-note { display:block; font-size:0.78rem; color:#888; margin-bottom:15px; }
+            .price-gst { font-size:0.9rem; color:#888; font-weight:400; }
+            .pricing-footnote { text-align:center; color:#777; font-size:0.85rem; max-width:800px; margin:30px auto 0; line-height:1.6; }
+    
+            /* --- Footer --- */
+            footer { background: var(--cap-dark-blue); color: #fff; padding: 10px 10px 20px; margin-top: 0px; }
+            .footer-top { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 0px; }
+            .footer-logo { font-size: 2rem; font-weight: 800; letter-spacing: 3px; margin-bottom: 20px; }
+            .social-icons { display: flex; gap: 15px; margin-top: 20px; }
+            .icon-link { color: #fff; font-size: 1.2rem; transition: 0.3s; }
+            .icon-link:hover { color: var(--cap-blue); }
+            .footer-bottom { max-width: 1200px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 0.85rem; }
+            .policy-links a { color: #fff; text-decoration: none; margin-left: 10px; opacity: 0.8; }
+    
+    /* Mobile Responsive adjustment */
+  
+    /* Container Layout */
+   .feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.feature-row:last-of-type {
+    margin-bottom: 0;
+}
+    /* The "Criss-Cross" Magic */
+    .feature-row.reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .feature-text {
+        flex: 1;
+        max-width: 600px;
+    }
+    
+    /* Glassmorphic Image Container */
+    .feature-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .feature-image img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px;
+        /* Glassmorphism Effect */
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 
+                    0 0 20px rgba(0, 255, 255, 0.2); /* Neon glow */
+    }
+/* DESKTOP DROPDOWN */
+@media (min-width: 993px) {
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        min-width: 180px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+
+        /* 🔥 THIS FIXES YOUR ISSUE */
+        max-height: none;
+        overflow: visible;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+    
+    /* Responsive for Mobile */
+    @media (max-width: 992px) {
+        .feature-row, .feature-row.reverse {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+        }
+    } 
+    @media (max-width: 768px) {
+    
+        .header-container {
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .login-actions {
+            width: 100%;
+            flex-direction: column;
+            gap: 8px;
+        }
+    
+        .login-btn {
+            width: auto;
+        }
+    }
+    @media (max-width: 768px) {
+        .feature-row {
+            gap: 20px;
+            padding: 20px 10px;
+        }
+    }
+    @media (max-width: 768px) {
+        .hero-buttons {
+            flex-direction: column;
+        }
+    
+        .btn-primary,
+        .btn-secondary {
+            width: 100%;
+        }
+    }
+    /* Hamburger button */
+    .menu-toggle {
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    /* --- Modernized Mobile Header --- */
+
+    @media (max-width: 768px) {
+ @media (max-width:768px){
+
+    .header-container{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px 15px;
+    }
+
+    .logo-area{
+        flex:0 1 auto;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        min-width:0;
+    }
+
+    .logo-area a{
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        width:auto;
+    }
+
+    .logo-area img{
+        height:35px;
+        margin:0;
+    }
+
+    .menu-toggle{
+        margin-left:auto;
+    }
+     .mobile-only-actions{
+    padding:15px;
+}
+}
+    
+        /* Mobile nav-menu, login button sizing, and header-fixed rules now
+           live in one place below (see "Global Fixes" / @media max-width:992px)
+           so the drawer and header can't fall out of sync with each other. */
+    }
+    .nav-menu {
+        transition: all 0.3s ease;
+    }
+            /* --- Navigation & Dropdown --- */
+            nav .nav-menu { display: flex; list-style: none; gap: 25px; align-items: center; }
+            nav .nav-menu a { color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.95rem; cursor: pointer; }
+            nav .nav-menu a:hover { color: var(--cap-blue); }
+    @media (max-width: 992px) {
+    /* Header stays pinned to the top of the viewport while scrolling on mobile */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    /* Push content down by the header's height so it isn't hidden underneath it */
+    #page-wrapper {
+        padding-top: 70px;
+    }
+}
+.feature-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 112, 173, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 48, 87, 0.1), 
+                0 0 15px rgba(0, 112, 173, 0.05); /* Subtle blue glow */
+}
+/* --- Global Fixes --- */
+.menu-toggle { display: none; } /* Hide by default on desktop */
+.mobile-only-actions { display: none; }
+
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .desktop-only { display: none; }
+    .mobile-only-actions { display: block; padding: 10px; }
+
+    .header-container { height: 70px; }
+
+    /* The Mobile Drawer — attaches flush to the header instead of floating as a detached card */
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: var(--cap-dark-blue);
+        flex-direction: column;
+        gap: 0 !important;
+        max-height: 0; /* Hidden by default */
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+        border-radius: 0;
+    }
+
+    .nav-menu.active {
+        max-height: 500px; /* Adjust based on content */
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    /* Smaller, icon-forward login buttons inside the drawer */
+    .mobile-only-actions .login-actions {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .mobile-only-actions .login-btn {
+        flex: 1;
+        width: auto;
+        padding: 8px 10px;
+        font-size: 0.75rem;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .mobile-only-actions .login-btn i {
+        font-size: 0.85rem;
+    }
+}
+
+    /* Fix dropdowns on mobile */
+@media (max-width: 992px) {
+    .dropdown-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: #00213a;
+    }
+
+    .dropdown.open .dropdown-menu {
+        max-height: 300px;
+    }
+}
+@media (max-width: 992px) {
+    .dropdown-menu {
+        background: #00213a;
+        padding-left: 15px;
+    }
+}
+
+
+/* When open */
+.dropdown.open .dropdown-menu {
+    max-height: 300px;
+}
+
+@media (max-width: 992px) {
+    .dropdown-menu li a {
+        color: #fff !important;
+    }
+
+    .dropdown-menu li a:hover {
+        color: var(--cap-blue) !important;
+    }
+}
+    </style>
+    
+<style id="sozyn-campaign-banner-style">
+.sozyn-ad-slot{display:block;width:100%;min-width:0;margin:0 0 25px;padding:0;overflow:hidden;border-radius:24px;background:#103c3a}
+.sozyn-ad-slot .sozyn-ad-fallback,.sozyn-ad-slot picture,.sozyn-ad-slot img{display:block;width:100%;margin:0}
+.sozyn-ad-slot img{height:auto;aspect-ratio:4/1;object-fit:cover;border-radius:24px}
+.sozyn-ad-slot a:focus-visible{outline:3px solid #27bb94;outline-offset:4px}
+@media(max-width:640px){.sozyn-ad-slot,.sozyn-ad-slot img{border-radius:18px}.sozyn-ad-slot img{aspect-ratio:2/1}}
+</style>
+<script defer src="https://anmosht.github.io/se/branding/favicon.js"></script>
+</head>
+    <body>
+    <div id="page-wrapper">
+    <header>
+    <div class="header-container">
+        <div class="logo-area">
+            <a href="#" onclick="goHome(); event.preventDefault();" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="images/sozyn-logo.svg" alt="SOZYN" style="height: 35px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" data-key="main.logo_src" data-key-attr="src">
+                <span class="logo-text" data-key="main.logo_text"></span>
+            </a>
+        </div>
+
+        <button class="menu-toggle" id="mobile-menu-btn" type="button">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul class="nav-menu" id="nav-list">
+                <li><a href="#" onclick="showServices(event)">Our Services</a></li>
+               <li class="dropdown">
+    <a href="#" onclick="toggleAboutMenu(event)">
+        About <span class="arrow">▾</span>
+    </a>
+
+    <ul class="dropdown-menu" id="aboutDropdown">
+        <li><a href="#" onclick="handleNavClick(event, showOverview)">Overview</a></li>
+        <li><a href="#" onclick="handleNavClick(event, showFounderMessage)">Message</a></li>
+        <li><a href="#" onclick="handleNavClick(event, showBlog)">Blog</a></li>
+    </ul>
+</li>
+                <li><a href="#" onclick="showPricing(event)">Pricing</a></li>
+                <li><a href="https://assist.sozyn.co.in/" target="_blank">User Assistance</a></li>
+                <li class="mobile-only-actions">
+                    <div class="login-actions">
+                        <button class="login-btn employer-btn" data-href-key="main.nav_employer_login_href" data-default-href="https://jobs.sozyn.co.in" onclick="sozynGo(this)">
+                            <i class="fas fa-search"></i> <span data-key="main.nav_employer_login_label">Search for Jobs</span>
+                        </button>
+                        <button class="login-btn candidate-btn" data-href-key="main.nav_candidate_login_href" data-default-href="login" onclick="sozynGo(this)">
+                            <i class="fas fa-user"></i> <span data-key="main.nav_candidate_login_label">Login</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="login-actions desktop-only">
+            <button class="login-btn employer-btn" data-href-key="main.nav_employer_login_href" data-default-href="https://jobs.sozyn.co.in" onclick="sozynGo(this)">
+                <i class="fas fa-search"></i> <span data-key="main.nav_employer_login_label">Search for Jobs</span>
+            </button>
+            <button class="login-btn candidate-btn" data-href-key="main.nav_candidate_login_href" data-default-href="login" onclick="sozynGo(this)">
+                <i class="fas fa-user"></i> <span data-key="main.nav_candidate_login_label">Login</span>
+            </button>
+        </div>
+    </div>
+</header>
+    
+    <div class="ticker-container">
+        <div class="ticker-track">
+            <span class="ticker-item">Welcome to SOZYN</span>
+            <span class="ticker-item">A one-stop candidate verification platform.</span>
+            <span class="ticker-item">Our application is under development.</span>
+            <span class="ticker-item">We will be live soon.</span>
+            <span class="ticker-item">STAY TUNED!</span>
+            <span class="ticker-item">Welcome to SOZYN</span>
+            <span class="ticker-item">A one-stop candidate verification platform.</span>
+            <span class="ticker-item">Our application is under development.</span>
+            <span class="ticker-item">We will be live soon.</span>
+            <span class="ticker-item">STAY TUNED!</span>        </div>
+    </div>
+    
+    <main>
+        <div id="main-content">
+        <section class="hero">
+<!-- EXPERT-LEVEL VISUAL POSTER CARDS SLIDER -->
+<div class="promo-slider-wrapper">
+    <div class="promo-slider" id="marketingSlider">
+        
+        <!-- Poster Slide 1: Jobseeker Board -->
+        <div class="promo-slide slide-jobseeker active" data-index="0">
+            <div class="promo-overlay-card">
+                <span class="promo-badge" data-key="main.promo1_badge">Membership Deal</span>
+                <h2 data-key="main.promo1_heading">Start your journey with onetime setup for just ₹9</h2>
+                <p data-key="main.promo1_text">Don't miss the premium verification dashboard. Build instant employer trust with chronological milestones and living performance scores at a single click.</p>
+                <div class="promo-action-row">
+                    <div class="hero-buttons" style="margin-top: 0;">
+                        <button class="btn-secondary" style="background: transparent; border: 2px solid #fff;" onclick="showPricing(event)">View Plans</button>
+                    </div>
+                    <button class="btn-cyan-action" data-href-key="main.row_jobseeker_cta1_href" data-default-href="candidate-register" onclick="sozynGo(this)"><span data-key="main.row_jobseeker_cta1">Create JobSeeker Profile</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Poster Slide 2: Employer Suite -->
+        <div class="promo-slide slide-employer" data-index="1">
+            <div class="promo-overlay-card" style="background: rgba(0, 33, 58, 0.85);">
+                <span class="promo-badge" style="background: var(--cap-blue);" data-key="main.promo2_badge">Enterprise License</span>
+                <h2 data-key="main.promo2_heading">Eliminate bad hires with tamper-proof checks</h2>
+                <p data-key="main.promo2_text">Run immediate background data checks directly against issuing authorities. Secure your hiring lifecycle pipelines completely starting at only ₹199.</p>
+                <div class="promo-action-row">
+                    <div class="hero-buttons" style="margin-top: 0;">
+                        <button class="btn-secondary" style="background: transparent; border: 2px solid #fff;" onclick="showPricing(event)">Explore Wallet Scale</button>
+                    </div>
+                    <button class="btn-cyan-action" data-href-key="main.row_employer_cta1_href" data-default-href="org-register" onclick="sozynGo(this)"><span data-key="main.row_employer_cta1">Get Enterprise Access</span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Slide Selectors Navigation Row -->
+    <div class="promo-tabs">
+        <button class="promo-tab active" onclick="switchPromoSlide(0)">
+            <i class="fas fa-file-contract"></i> Jobseeker Board Activation
+        </button>
+        <button class="promo-tab" onclick="switchPromoSlide(1)">
+            <i class="fas fa-user-shield"></i> Employer Suite Registration
+        </button>
+    </div>
+</div>
+<!-- SOZYN advertising: reviewed paid campaigns replace this house-banner fallback. -->
+<div class="sozyn-ad-slot" data-sozyn-ads="main" aria-label="Advertisement">
+    <a href="https://ads.sozyn.co.in/" class="sozyn-ad-fallback" aria-label="Open SOZYN Advertisement Portal">
+        <picture>
+            <source media="(max-width: 640px)" srcset="https://ads.sozyn.co.in/assets/advertise-mobile.svg">
+            <img src="https://ads.sozyn.co.in/assets/advertise-desktop.svg" alt="Advertise with SOZYN — open the Advertisement Portal" width="1600" height="400" loading="lazy" decoding="async">
+        </picture>
+    </a>
+</div>
+<script src="https://ads.sozyn.co.in/embed.js?portal=main" async></script>
+            <div class="feature-row">
+                <div class="feature-text">
+                    <h1 data-key="main.row_employer_h1">For Employer</h1>
+                    <p class="hero-eyebrow" data-key-html="main.row_employer_eyebrow_html">WE ASSIST ORGANIZATIONS IN <strong>CANDIDATE SCREENING</strong></p>
+                    <p class="hero-subtitle" data-key-html="main.row_employer_subtitle_html">
+                        <strong>Verified Employment Records:</strong> We go beyond self-reported resumes. Our system cross-references professional milestones to provide a chronological, tamper-proof history of a candidate's journey.<br><br>
+                        <strong>Validated Qualifications:</strong> From academic degrees to niche technical certifications, we ensure that every credential is tied to the issuing authority, protecting your organization from "paper-thin" applications.<br><br>
+                        <strong>A Culture of Transparency:</strong> By making verification the standard, we foster a marketplace where high-quality candidates stand out.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" data-href-key="main.row_employer_btn1_href" data-default-href="org-register" onclick="sozynGo(this)"><span data-key="main.row_employer_btn1">Register your Organization</span></button>
+                        <button class="btn-secondary" data-href-key="main.row_employer_btn2_href" data-default-href="https://employer.sozyn.co.in" onclick="sozynGo(this)"><span data-key="main.row_employer_btn2">Learn More</span></button>
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <img src="images/employersuite.jpg" alt="Employer Screening Dashboard" loading="lazy" decoding="async" data-key="main.row_employer_img" data-key-attr="src">
+                </div>
+            </div>
+    
+            <div class="feature-row reverse">
+                <div class="feature-text">
+                    <h1 data-key="main.row_jobseeker_h1">For Jobseeker</h1>
+                    <p class="hero-eyebrow" data-key-html="main.row_jobseeker_eyebrow_html">WE MAKE THEIR PROFILE A <strong>PRE-VERIFIED CANDIDATURE</strong></p>
+                    <p class="hero-subtitle" data-key-html="main.row_jobseeker_subtitle_html">
+                        <strong>Authenticated Career Milestones:</strong> Instant credibility. Present a verified record of your tenures and roles that employers can trust at first glance.<br><br>
+                        <strong>Dynamic Performance Metrics:</strong> Your Employee Score acts as a living resume. It updates as you grow, giving recruiters a clear, data-backed indicator of your readiness.<br><br>
+                        <strong>The Transparency Advantage:</strong> Build immediate rapport with hiring managers. Our trusted format removes the "guesswork" from the evaluation process.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" data-href-key="main.row_jobseeker_btn1_href" data-default-href="candidate-register" onclick="sozynGo(this)"><span data-key="main.row_jobseeker_btn1">Create Employee Profile</span></button>
+                        <button class="btn-secondary" data-href-key="main.row_jobseeker_btn2_href" data-default-href="https://candidate.sozyn.co.in" onclick="sozynGo(this)"><span data-key="main.row_jobseeker_btn2">Know More</span></button>
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <img src="images/jobseeker.jpg" loading="lazy" decoding="async" data-key="main.row_jobseeker_img" data-key-attr="src">
+                </div>
+            </div>
+    
+            <div class="feature-row">
+                <div class="feature-text">
+                    <h1 data-key="main.row_moonspy_h1">Future Products</h1>
+                    <p class="hero-eyebrow" data-key-html="main.row_moonspy_eyebrow_html">MOONSPY - A <strong>DUAL EMPLOYMENT</strong> TOOL</p>
+                    <p class="hero-subtitle" data-key-html="main.row_moonspy_subtitle_html">
+                        <strong>Conflict-Free Validation:</strong> Eliminate the risks of undisclosed dual employment. MOONSPY provides an authenticated lens into a professional's current engagements, allowing for data-backed conversations around bandwidth and contractual integrity.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary"><span data-key="main.row_moonspy_btn1">Stay Tuned</span></button>
+                        <button class="btn-secondary" data-href-key="main.row_moonspy_btn2_href" data-default-href="https://moonspy.sozyn.co.in" onclick="sozynGo(this)"><span data-key="main.row_moonspy_btn2">Factsheet</span></button>
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <img src="images/moonspy.jpg" alt="Moonspy Analytics" loading="lazy" decoding="async" data-key="main.row_moonspy_img" data-key-attr="src">
+                </div>
+            </div>
+
+            <div class="feature-row reverse">
+                <div class="feature-text">
+                    <h1 data-key="main.row_wynd_h1">For Recruiters</h1>
+                    <p class="hero-eyebrow" data-key-html="main.row_wynd_eyebrow_html">WyND - <strong>VERIFIED RECRUITING</strong>, END TO END</p>
+                    <p class="hero-subtitle" data-key-html="main.row_wynd_subtitle_html">
+                        <strong>Post & Track:</strong> 5 free job posts within 90 days, live view and applicant analytics on every listing.<br><br>
+                        <strong>Shortlist & Schedule:</strong> Interview scheduling built in, with automatic notifications sent straight to the candidate's JobSeeker Board dashboard.<br><br>
+                        <strong>Verify & Onboard:</strong> A flat-fee background verification and a fully digital onboarding flow, all in one place.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" data-href-key="main.row_wynd_btn1_href" data-default-href="org-register" onclick="sozynGo(this)"><span data-key="main.row_wynd_btn1">Register your Organization</span></button>
+                        <button class="btn-secondary" data-href-key="main.row_wynd_btn2_href" data-default-href="https://wynd.sozyn.co.in" onclick="sozynGo(this)"><span data-key="main.row_wynd_btn2">Learn More</span></button>
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <img src="images/HRM.jpg" alt="WyND Recruiting" loading="lazy" decoding="async" data-key="main.row_wynd_img" data-key-attr="src">
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-text">
+                    <h1 data-key="main.row_jobway_h1">For Jobseekers</h1>
+                    <p class="hero-eyebrow" data-key-html="main.row_jobway_eyebrow_html">JOBWAY - <strong>FREE</strong> JOB SEARCH</p>
+                    <p class="hero-subtitle" data-key-html="main.row_jobway_subtitle_html">
+                        <strong>Always Free:</strong> Search and apply to pre-qualified, employer-requested job listings at no cost, ever.<br><br>
+                        <strong>Two Ways to Apply:</strong> Upload a resume and fill an employer's questionnaire, or apply instantly with your JobSeeker Board Premium profile for a higher shortlisting chance.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" data-href-key="main.row_jobway_btn1_href" data-default-href="candidate-register" onclick="sozynGo(this)"><span data-key="main.row_jobway_btn1">Start Applying</span></button>
+                        <button class="btn-secondary" data-href-key="main.row_jobway_btn2_href" data-default-href="https://jobs.sozyn.co.in" onclick="sozynGo(this)"><span data-key="main.row_jobway_btn2">Learn More</span></button>
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <img src="images/blogvp.jpg" alt="JobWay Search" loading="lazy" decoding="async" data-key="main.row_jobway_img" data-key-attr="src">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+        <div id="services-content" style="display:none; padding:60px 20px; max-width:1200px; margin:auto;">
+            <button class="back-home" onclick="goHome()">← Back to Home</button>
+            <h1 style="color:var(--cap-dark-blue)">Our Services</h1>
+            <div class="services-grid">
+                <div class="service-card" data-href-key="main.svc_employer_href" data-default-href="https://employer.sozyn.co.in" onclick="sozynGo(this)" style="cursor:pointer;">
+                  <i class="fas fa-user-shield"></i>
+                  <h3 data-key="main.svc_employer_title">Employer Suite</h3>
+                  <p data-key="main.svc_employer_text">Fast and reliable employment history and identity verification for new joiners.</p>
+                </div>
+                <div class="service-card" data-href-key="main.svc_jobseeker_href" data-default-href="https://candidate.sozyn.co.in" onclick="sozynGo(this)" style="cursor:pointer;">
+                  <i class="fas fa-file-contract"></i>
+                  <h3 data-key="main.svc_jobseeker_title">Jobseeker Board</h3>
+                  <p data-key="main.svc_jobseeker_text">Dashboard with pre-defined data, certificate validation, and SOZYN score.</p>
+                </div>
+                <div class="service-card" data-href-key="main.svc_moonspy_href" data-default-href="https://moonspy.sozyn.co.in" onclick="sozynGo(this)" style="cursor:pointer;">
+                    <i class="fas fa-eye"></i>
+                    <h3 data-key="main.svc_moonspy_title">MoonSpy</h3>
+                    <p data-key="main.svc_moonspy_text">Identify dual employment for individual jobseekers across India.</p>
+                </div>
+                <div class="service-card" data-href-key="main.svc_jobway_href" data-default-href="https://jobs.sozyn.co.in" onclick="sozynGo(this)" style="cursor:pointer;">
+                    <i class="fas fa-route"></i>
+                    <h3 data-key="main.svc_jobway_title">Sozyn Jobs</h3>
+                    <p data-key="main.svc_jobway_text">Pre-qualified, employer-requested catalogue of job opportunities.</p>
+                </div>
+                <div class="service-card" data-href-key="main.svc_wynd_href" data-default-href="https://wynd.sozyn.co.in" onclick="sozynGo(this)" style="cursor:pointer;">
+                    <i class="fas fa-globe"></i>
+                    <h3 data-key="main.svc_wynd_title">JobWynd</h3>
+                    <p data-key="main.svc_wynd_text">Identify employees served before and currently serving in your organization.</p>
+                </div>
+            </div>
+        </div>
+    
+<div id="overview-content" style="display:none; padding:60px 20px; max-width:1000px; margin:auto;">
+
+    <button class="back-home" onclick="goHome()">← Back to Home</button>
+
+    <div data-key-html="main.page_about_html">
+    <h1 style="color:var(--cap-dark-blue)">Company Overview</h1>
+
+    <p style="margin-top:20px;">
+        <strong>SOZYN LLP</strong> is an Indian technology company focused on modernizing employment intelligence, workforce verification, and digital hiring solutions. Established with the vision of building trust between employers and professionals, SOZYN develops secure platforms that enable organizations to make informed employment decisions while empowering individuals to maintain complete ownership of their professional records.
+    </p>
+    <p>
+        The traditional recruitment process often requires employers to review hundreds of resumes, manually verify employment history, collect supporting documents, and conduct extensive background verification before making a hiring decision. These activities consume valuable time, increase recruitment costs, and frequently delay onboarding. SOZYN was created to simplify this process through technology-driven verification workflows, standardized employment records, and secure document management.
+    </p>
+    <p>
+        Our solutions are designed around a simple principle: employment information should be transparent, authenticated where possible, securely managed, and shared only with the individual's consent. Rather than requiring professionals to repeatedly submit the same employment information for every job application, SOZYN enables them to maintain a continuously updated professional profile throughout their career.
+    </p>
+    <h2 style="margin-top:35px;color:var(--cap-dark-blue);">Our Platforms</h2>
+    <p>
+        SOZYN delivers multiple integrated platforms that work together to create a trusted employment ecosystem.
+    </p>
+    <ul style="margin-left:25px; line-height:2;">
+        <li><strong>JobSeekerBoard</strong> – A dedicated platform for students, job seekers, and working professionals to maintain verified employment history, educational qualifications, certifications, career achievements, and employment-related documents.</li>
+        <li><strong>Employer Suite</strong> – A comprehensive portal for organizations to request candidate authorization, review verified employment information, manage employment verification workflows, and make informed recruitment decisions.</li>
+        <li><strong>MoonSpy</strong> – An employment intelligence solution developed to assist organizations in identifying potential dual employment scenarios and promoting workplace transparency while respecting privacy and applicable regulations.</li>
+    </ul>
+    <h2 style="margin-top:35px;color:var(--cap-dark-blue);">What We Do</h2>
+    <p>
+        SOZYN provides technology solutions that enable candidates to securely manage their complete professional journey in one centralized platform. Users can maintain detailed employment records, academic qualifications, professional certifications, employment timelines, salary information, project experience, and employment-related documentation throughout their career.
+    </p>
+    <p>
+        Organizations, after obtaining the candidate's explicit authorization, can review verified employment information to support recruitment, employment verification, workforce planning, and talent acquisition. This consent-based model helps protect candidate privacy while reducing repetitive documentation and improving recruitment efficiency.
+    </p>
+    <h2 style="margin-top:35px;color:var(--cap-dark-blue);">Our Mission</h2>
+    <p>
+        Our mission is to create a trusted employment ecosystem where candidates maintain lifelong ownership of their professional records, organizations gain access to reliable employment information through candidate consent, and recruitment processes become faster, more transparent, and more efficient for everyone involved.
+    </p>
+    <h2 style="margin-top:35px;color:var(--cap-dark-blue);">Our Vision</h2>
+    <p>
+        We envision a future where employment verification is no longer a repetitive administrative task but a secure, standardized, and digitally managed process. Through continuous innovation, SOZYN aims to become one of India's most trusted employment intelligence platforms, helping employers recruit with greater confidence while enabling professionals to build verified digital career identities.
+    </p>
+    <h2 style="margin-top:35px;color:var(--cap-dark-blue);">Privacy & Candidate Control</h2>
+    <p>
+        Privacy is one of the core principles of every SOZYN platform. Candidates remain the owners of their information and decide when, how, and with whom their professional records are shared. Organizations cannot access employment records, supporting documents, or verification information without the candidate's approval, and access can be revoked by the candidate whenever permitted by platform policies.
+    </p>
+    <h2 style="margin-top:35px;color:var(--cap-dark-blue);">Our Commitment</h2>
+
+    <p>
+        At SOZYN, we are committed to delivering secure, reliable, and technology-driven employment solutions that simplify hiring while maintaining transparency, accountability, and trust. We continuously invest in improving our platforms to meet the evolving needs of candidates, employers, educational institutions, and organizations across India.
+    </p>
+    <div style="margin-top:40px; padding:25px; background:#f4f8ff; border-left:5px solid var(--cap-dark-blue); border-radius:8px;">
+        <h3 style="margin-top:0;color:var(--cap-dark-blue);">Our Core Values</h3>
+        <ul style="margin-left:25px; line-height:2;">
+            <li>Integrity in employment information.</li>
+            <li>Candidate privacy and data ownership.</li>
+            <li>Transparency through consent-based information sharing.</li>
+            <li>Innovation in employment technology.</li>
+            <li>Trust between candidates and employers.</li>
+            <li>Continuous improvement through digital transformation.</li>
+            <li>Security, compliance, and responsible data management.</li>
+        </ul>
+    </div>
+    </div>
+</div>
+   
+<div id="founder-message-content" style="display:none; padding:60px 20px; max-width:900px; margin:auto;">
+
+    <button class="back-home" onclick="goHome()">← Back to Home</button>
+
+    <div data-key-html="main.page_founder_html">
+    <h1 style="color:var(--cap-dark-blue)">Founder's Message</h1>
+
+    <div style="background:var(--bg-light); padding:40px; margin-top:30px; border-left:5px solid var(--cap-blue); border-radius:8px;">
+
+        <p><strong>Dear Job Seekers, Employers, Partners, and Visitors,</strong></p>
+
+        <br>
+
+        <p>
+            Every company has a story. SOZYN began with mine.
+        </p><br>
+
+        <p>
+            Before becoming an entrepreneur, I was an employee. Like many professionals, I started my career with dreams of building a successful future. However, my journey was far from perfect. During the early years of my career, I struggled to adapt to professional work culture, time management, workplace discipline, and the expectations that organizations place on their employees.
+        </p><br>
+
+        <p>
+            Looking back, I acknowledge that many of the challenges I faced were the result of my own decisions. I preferred flexibility over structure, underestimated the importance of consistency, and did not always appreciate how attendance, communication, accountability, and workplace professionalism contribute to long-term career success.
+        </p><br>
+
+        <p>
+            Those decisions affected my employment journey. Some opportunities ended earlier than expected, while others were lost before they could truly begin. Every setback became a lesson that taught me something new about responsibility, professionalism, and the importance of building trust with employers.
+        </p><br>
+
+        <p>
+            As time passed, I realized that employment is much more than earning a salary. It is the foundation upon which individuals build their careers, support their families, earn respect, and create opportunities for the future. Losing employment can impact not only financial stability but also confidence, personal growth, and overall quality of life.
+        </p><br>
+
+        <p>
+            During my own job search, I experienced another challenge. Every new employer wanted to verify my previous employment history. I often wondered why candidates had to repeatedly prove the same employment records to every organization they joined. I realized that employment verification was often fragmented, time-consuming, and inconsistent for both employers and candidates.
+        </p><br>
+
+        <p>
+            That realization inspired the creation of <strong>SOZYN</strong>.
+        </p><br>
+
+        <p>
+            My vision was not simply to build another employment platform. I wanted to create an ecosystem where professionals could maintain a lifelong employment profile, preserve their career achievements, securely store employment records, and share verified information with organizations only through their consent.
+        </p><br>
+
+        <p>
+            Through <strong>JobSeekerBoard</strong>, candidates can maintain their employment history, education, certifications, and career documents in one secure place. Through <strong>Employer Suite</strong>, organizations can review verified employment information after receiving authorization from the candidate, helping simplify recruitment and employment verification.
+        </p><br>
+
+        <p>
+            My hope is that JobSeekerBoard encourages professionals to value honesty, accountability, discipline, and continuous improvement throughout their careers. A transparent employment history not only builds confidence with employers but also motivates individuals to maintain strong professional standards wherever they work.
+        </p><br>
+
+        <p>
+            SOZYN is not about judging a person's past. It is about helping individuals build a stronger future. Everyone makes mistakes. What truly matters is learning from those experiences, improving ourselves, and creating opportunities for growth.
+        </p><br>
+
+        <p>
+            If my own career journey—both its successes and its failures—can inspire even one professional to protect their employment, maintain a strong work ethic, and build a trusted career record, then the purpose behind SOZYN has already begun to succeed.
+        </p><br>
+
+        <p>
+            Thank you for taking the time to learn about our journey. I sincerely hope SOZYN becomes a platform that helps professionals and organizations build stronger, more transparent, and more trustworthy employment relationships.
+        </p><br>
+
+        <br>
+
+        <p>
+            <strong>With gratitude,</strong>
+        </p>
+
+        <p><br>
+            <strong>Mohammad Shahid</strong><br>
+            Founder & Managing Partner<br>
+            SOZYN LLP
+        </p>
+
+    </div>
+    </div>
+
+</div>
+    
+    <div id="blog-content" style="display:none; padding:100px 20px 60px; max-width:1100px; margin:0 auto; font-family: 'Ubuntu', sans-serif;">
+        
+        <button class="back-home" onclick="goHome()" style="background:none; border:none; color:var(--cap-blue); font-weight:700; cursor:pointer; margin-bottom:50px; font-size:1.1rem; display:flex; align-items:center; gap:10px;">
+            <i class="fas fa-arrow-left"></i> Return to Home
+        </button>
+        <div data-key-html="main.page_blog_html">
+        <div style="border-left: 5px solid var(--cap-blue); padding-left: 25px; margin-bottom: 80px;">
+            <h1 style="color:var(--cap-dark-blue); font-size: 3.5rem; line-height: 1.1; margin-bottom: 15px;">Newsroom</h1>
+            <p style="color: #666; font-size: 1.3rem; font-weight: 300;">Insights, technical updates, and the future of professional verification.</p>
+        </div>
+    
+        <div class="news-list-container" style="display: flex; flex-direction: column; gap: 80px;">
+            
+            <div class="news-card" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; padding-bottom: 60px; border-bottom: 1px solid #eee;">
+                <div style="flex: 1; min-width: 320px;">
+                    <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.12); height: 300px;">
+                        <img src="images/blog1.webp" style="width:100%; height:100%; object-fit:cover;" alt="Verification Engine" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div style="flex: 1.5; min-width: 320px;">
+                    <span style="color:var(--cap-blue); font-weight:700; text-transform:uppercase; font-size:0.85rem; letter-spacing:1.5px;">Technology Update</span>
+                    <h2 style="color:var(--cap-dark-blue); margin:15px 0; font-size:2rem; line-height:1.3;">The 2026 Verification Engine</h2>
+                    <p style="color:#555; line-height:1.8; font-size:1.05rem; margin-bottom:20px;">SOZYN has officially deployed its next-generation verification engine, marking a significant milestone in automated candidate screening. By integrating real-time documentation standards, we have created a structured data environment that eliminates the ambiguity often found in traditional resumes. Ensuring that technical credentials proven.</p>
+                    <a href="#" style="color:var(--cap-blue); text-decoration:none; font-weight:700; border-bottom: 2px solid var(--cap-blue); padding-bottom:2px;">View Full Specs →</a>
+                </div>
+            </div>
+    
+            <div class="news-card" style="display: flex; flex-wrap: wrap-reverse; gap: 40px; align-items: flex-start; padding-bottom: 60px; border-bottom: 1px solid #eee;">
+                <div style="flex: 1.5; min-width: 320px;">
+                    <span style="color:var(--cap-blue); font-weight:700; text-transform:uppercase; font-size:0.85rem; letter-spacing:1.5px;">Security & Compliance</span>
+                    <h2 style="color:var(--cap-dark-blue); margin:15px 0; font-size:2rem; line-height:1.3;">Anti-Fraud Encryption</h2>
+                    <p style="color:#555; line-height:1.8; font-size:1.05rem; margin-bottom:20px;">In an era where digital forgery is becoming increasingly sophisticated, Once a document is verified by our team, it is assigned a unique cryptographic signature that makes it an immutable record for the duration of the candidate's career. We believe that by securing the data at the source, we can restore total confidence to the digital hiring ecosystem.</p>
+                    <a href="#" style="color:var(--cap-blue); text-decoration:none; font-weight:700; border-bottom: 2px solid var(--cap-blue); padding-bottom:2px;">Explore Security Layers →</a>
+                </div>
+                <div style="flex: 1; min-width: 320px;">
+                    <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.12); height: 300px;">
+                        <img src="images/blog2.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Document Security" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="news-card" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; padding-bottom: 60px; border-bottom: 1px solid #eee;">
+                <div style="flex: 1; min-width: 320px;">
+                    <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.12); height: 300px;">
+                        <img src="images/blog3.png" style="width:100%; height:100%; object-fit:cover;" alt="Infrastructure Scaling" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div style="flex: 1.5; min-width: 320px;">
+                    <span style="color:var(--cap-blue); font-weight:700; text-transform:uppercase; font-size:0.85rem; letter-spacing:1.5px;">Infrastructure</span>
+                    <h2 style="color:var(--cap-dark-blue); margin:15px 0; font-size:2rem; line-height:1.3;">Scaling for 3 Crore Users</h2>
+                    <p style="color:#555; line-height:1.8; font-size:1.05rem; margin-bottom:20px;">As SOZYN LLP prepares for nationwide expansion, our engineering team is currently architecting a cloud infrastructure capable of supporting 30 million (3 crore) active users. This massive scaling effort involves transitioning to a high-availability microservices architecture that ensures zero-latency data retrieval even during peak traffic hours.</p>
+                    <a href="#" style="color:var(--cap-blue); text-decoration:none; font-weight:700; border-bottom: 2px solid var(--cap-blue); padding-bottom:2px;">Read Our Roadmap →</a>
+                </div>
+            </div>
+    
+            <div class="news-card" style="display: flex; flex-wrap: wrap-reverse; gap: 40px; align-items: flex-start; padding-bottom: 60px; border-bottom: 1px solid #eee;">
+                <div style="flex: 1.5; min-width: 320px;">
+                    <span style="color:var(--cap-blue); font-weight:700; text-transform:uppercase; font-size:0.85rem; letter-spacing:1.5px;">Developer Hub</span>
+                    <h2 style="color:var(--cap-dark-blue); margin:15px 0; font-size:2rem; line-height:1.3;">Seemless HRM Support</h2>
+                    <p style="color:#555; line-height:1.8; font-size:1.05rem; margin-bottom:20px;">This API allows organizations to bake our world-class verification workflows directly into their existing Human Resource Management Systems (HRMS) or internal employer portals. With comprehensive documentation, "developer-core" SDKs, and dedicated technical support, integrating verified candidate data has never been more seamless.</p>
+                    <a href="#" style="color:var(--cap-blue); text-decoration:none; font-weight:700; border-bottom: 2px solid var(--cap-blue); padding-bottom:2px;">API Documentation →</a>
+                </div>
+                <div style="flex: 1; min-width: 320px;">
+                    <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.12); height: 300px;">
+                        <img src="images/HRM.jpg" style="width:100%; height:100%; object-fit:cover;" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="news-card" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+                <div style="flex: 1; min-width: 320px;">
+                    <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.12); height: 300px;">
+                        <img src="images/blogvp.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Visionary Service" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div style="flex: 1.5; min-width: 320px;">
+                    <span style="color:var(--cap-blue); font-weight:700; text-transform:uppercase; font-size:0.85rem; letter-spacing:1.5px;">Vision</span>
+                    <h2 style="color:var(--cap-dark-blue); margin:15px 0; font-size:2rem; line-height:1.3;">Bridging the Trust Gap in Recruitment</h2>
+                    <p style="color:#555; line-height:1.8; font-size:1.05rem; margin-bottom:20px;">In a recent leadership summit, it was emphasized that the future of recruitment is built on a foundation of radical transparency. SOZYN was founded on the principle that while resumes tell a story, verified data tells the truth. We are empowering the workforce to take ownership of their verified history.</p>
+                    <a href="#" style="color:var(--cap-blue); text-decoration:none; font-weight:700; border-bottom: 2px solid var(--cap-blue); padding-bottom:2px;">Read Full Interview →</a>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    </div>
+    
+        <div id="pricing-content" style="display:none; padding:60px 20px; max-width:1200px; margin:auto;">
+            <button class="back-home" onclick="goHome()">← Back to Home</button>
+            <h1 style="text-align:center; color:var(--cap-dark-blue)">Pricing Packages</h1>
+            <p style="text-align:center; color:#666; max-width:700px; margin:10px auto 0;" data-key="main.pricing_intro">Five products, one verified-employment ecosystem. All prices in ₹ (INR); GST applies where noted.</p>
+            <div class="pricing-tabs" style="flex-wrap:wrap;">
+                <button class="pricing-tab active" id="tab-js" onclick="switchPricing('jobseekers', event)">JobSeeker Board</button>
+                <button class="pricing-tab" id="tab-emp" onclick="switchPricing('employers', event)">Employer Suite</button>
+                <button class="pricing-tab" id="tab-wynd" onclick="switchPricing('wynd', event)">JobWynd</button>
+                <button class="pricing-tab" id="tab-jw" onclick="switchPricing('jobway', event)">SOZYN Jobs</button>
+                <button class="pricing-tab" id="tab-ms" onclick="switchPricing('moonspy', event)">MoonSpy</button>
+            </div>
+
+            <div id="jobseekers" class="pricing-group">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 data-key="main.price_jobseekers1_title">Free</h3>
+                        <div class="price" data-key-html="main.price_jobseekers1_price_html">₹0</div>
+                        <ul data-key-html="main.price_jobseekers1_features_html"><li>Create your profile</li><li>Add education, skills & certifications</li><li>Add past & current employment</li></ul>
+                        <button class="btn-primary" data-href-key="main.price_jobseekers1_btn_label_href" data-default-href="candidate-register" onclick="sozynGo(this)"><span data-key="main.price_jobseekers1_btn_label">Get Started</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <h3 data-key="main.price_jobseekers2_title">Premium</h3>
+                        <div class="price" data-key-html="main.price_jobseekers2_price_html">₹99</div>
+                        
+                        <ul data-key-html="main.price_jobseekers2_features_html"><li>Profile visible to recruiters on WyND</li><li>Verified badge on applications</li><li>Priority shortlisting weight</li></ul>
+                        <button class="btn-primary" data-href-key="main.price_jobseekers2_btn_label_href" data-default-href="candidate-register" onclick="sozynGo(this)"><span data-key="main.price_jobseekers2_btn_label">Upgrade</span></button>
+                    </div>
+                </div>
+                <p class="pricing-footnote" data-key="main.price_jobseekers_footnote">Challenging a false claim from a past employer: ₹19 + GST per request (receiving a challenge is free). Interview no-show penalty: ₹149 + GST after 3 warnings.</p>
+            </div>
+
+            <div id="employers" class="pricing-group" style="display:none;">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 data-key="main.price_employers1_title">Registration</h3>
+                        <div class="price" data-key-html="main.price_employers1_price_html">₹299<span class="price-gst">+GST</span></div>
+                        <span class="price-note" data-key="main.price_employers1_note">one-time</span>
+                        <ul data-key-html="main.price_employers1_features_html"><li>Requires Company Reg. ID, GST & PAN</li><li>Connects your current employees</li><li>Includes 5 free WyND job posts (90 days)</li></ul>
+                        <button class="btn-primary" data-href-key="main.price_employers1_btn_label_href" data-default-href="org-register" onclick="sozynGo(this)"><span data-key="main.price_employers1_btn_label">Start Hiring</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <h3 data-key="main.price_employers2_title">Past Employee Data</h3>
+                        <div class="price" data-key-html="main.price_employers2_price_html">₹199<span class="price-gst">/100</span></div>
+                        <span class="price-note" data-key="main.price_employers2_note">or ₹399 for full dataset · 30-day access</span>
+                        <ul data-key-html="main.price_employers2_features_html"><li>See a trailer (count) for free</li><li>CSV export, search & verification tags</li><li>Mark Verified / False Claim + Red Flags</li></ul>
+                        <button class="btn-primary" data-href-key="main.price_employers2_btn_label_href" data-default-href="org-register" onclick="sozynGo(this)"><span data-key="main.price_employers2_btn_label">Get Started</span></button>
+                    </div>
+                </div>
+                <p class="pricing-footnote" data-key="main.price_employers_footnote">Per-request to a past employer (documents/messages): ₹19 + GST, settled in 3–5 days. No-show penalty: ₹299 + GST after 3 warnings.</p>
+            </div>
+
+            <div id="wynd" class="pricing-group" style="display:none;">
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 data-key="main.price_wynd1_title">First 5 Posts</h3>
+                        <div class="price" data-key-html="main.price_wynd1_price_html">Free</div>
+                        <span class="price-note" data-key="main.price_wynd1_note">within 90 days of Employer Suite registration</span>
+                        <ul data-key-html="main.price_wynd1_features_html"><li>30-day WyND access included</li><li>Each post live for 21 days</li><li>View & applicant analytics</li></ul>
+                        <button class="btn-primary" data-href-key="main.price_wynd1_btn_label_href" data-default-href="org-register" onclick="sozynGo(this)"><span data-key="main.price_wynd1_btn_label">Post a Job</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <h3 data-key="main.price_wynd2_title">Additional Posts</h3>
+                        <div class="price" data-key-html="main.price_wynd2_price_html">₹99<span class="price-gst">+GST</span></div>
+                        <span class="price-note" data-key="main.price_wynd2_note">per post, after your 5 free posts</span>
+                        <ul data-key-html="main.price_wynd2_features_html"><li>Interview scheduling & notifications</li><li>Basic BGV: flat ₹49 + GST</li><li>Digital onboarding included</li></ul>
+                        <button class="btn-primary" data-href-key="main.price_wynd2_btn_label_href" data-default-href="org-register" onclick="sozynGo(this)"><span data-key="main.price_wynd2_btn_label">Learn More</span></button>
+                    </div>
+                </div>
+                <p class="pricing-footnote" data-key="main.price_wynd_footnote">No-show after 3 warnings: ₹149 + GST (candidate) / ₹299 + GST (organization). Cancel or decline any interview up to 1 hour before.</p>
+            </div>
+
+            <div id="jobway" class="pricing-group" style="display:none;">
+                <div class="pricing-grid">
+                    <div class="pricing-card featured" style="max-width:360px;">
+                        <h3 data-key="main.price_jobway1_title">Always Free</h3>
+                        <div class="price" data-key-html="main.price_jobway1_price_html">₹0</div>
+                        <ul data-key-html="main.price_jobway1_features_html"><li>Search & apply to unlimited listings</li><li>Apply via resume + questionnaire</li><li>Or apply instantly with JobSeeker Board Premium</li></ul>
+                        <button class="btn-primary" data-href-key="main.price_jobway1_btn_label_href" data-default-href="candidate-register" onclick="sozynGo(this)"><span data-key="main.price_jobway1_btn_label">Start Applying</span></button>
+                    </div>
+                </div>
+                <p class="pricing-footnote" data-key="main.price_jobway_footnote">JobWay never charges jobseekers. Listings come from organizations registered on Employer Suite and posted via WyND.</p>
+            </div>
+
+            <div id="moonspy" class="pricing-group" style="display:none;">
+                <div class="pricing-grid">
+                    <div class="pricing-card" style="max-width:360px;">
+                        <h3 data-key="main.price_moonspy1_title">Coming Soon</h3>
+                        <div class="price" data-key-html="main.price_moonspy1_price_html">—</div>
+                        <ul data-key-html="main.price_moonspy1_features_html"><li>Dual-employment detection</li><li>Included with Employer Suite verification</li><li>Pricing to be announced</li></ul>
+                        <button class="btn-secondary" data-href-key="main.price_moonspy1_btn_label_href" data-default-href="https://moonspy.sozyn.co.in" onclick="sozynGo(this)"><span data-key="main.price_moonspy1_btn_label">Factsheet</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<div id="policy-content" style="display:none; padding:60px 20px; max-width:1000px; margin:auto; font-family: sans-serif; line-height: 1.6; color: #333;">
+            <button class="back-home" onclick="goHome()" style="margin-bttom: 20px; cursor: pointer;">← Back to Home</button>
+            
+            <!-- TERMS OF USE SECTION -->
+            <div id="terms" class="policy-section" style="display:none;" data-key-html="main.page_terms_html">
+                <h1>Terms of Use</h1>
+                <p><strong>Effective Date:</strong> July 2026</p><br>
+                <p>Welcome to SOZYN (sozyn.co.in). These Terms of Use ("Terms") constitute a legally binding agreement between you ("User", "Candidate", or "Employer") and SOZYN governing your access to and use of our web portal, candidate screening tools, and background verification suite.</p>
+                
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+                <br><h3>1. Nature of Services</h3>
+                <p>SOZYN operates a specialized digital ecosystem that bridges pre-verified job seekers with prospective employers. The platform functions as both a niche aircraft maintenance and technical talent board and a background verification (BGV) suite. Our services facilitate candidate-driven credential submission and employer-driven validation, performance feedback, and authenticity mapping.</p>
+
+                <br><h3>2. Candidate Account Sovereignty & Data Accuracy</h3>
+                <ul>
+                    <li><strong>The Solo Right to Edit:</strong> Candidates retain complete, exclusive autonomy over their personal profiles. You hold the absolute solo right to update, modify, or edit your uploaded information—including personal details, educational history, employment milestones, and professional certifications—at any time.</li>
+                    <li><strong>Purpose of Modification:</strong> Profile editing features are provided strictly to maintain data accuracy for legitimate vetting and background screening purposes.</li>
+                    <li><strong>Verification Integrity:</strong> Once information is locked for an active verification check, system-generated verification statuses, comments, or official remarks provided by verifying authorities cannot be altered or bypassed by the candidate.</li>
+                </ul>
+
+                <br><h3>3. Restrictive Access, Paywalls, and Employer Compliance</h3>
+                <ul>
+                    <li><strong>Data Shielding:</strong> To guarantee utmost privacy, candidate data portfolios are entirely shielded from public indexing, scrapers, and unauthenticated web traffic.</li>
+                    <li><strong>Minimal Premium Access Fee:</strong> No employer or third-party entity can view, access, or download a candidate’s granular personal, educational, or employment history unless a mandatory, minimal processing payment is successfully processed through our designated payment gateway.</li>
+                    <li><strong>Authorized Use:</strong> Information unlocked via payment must be used solely for internal corporate hiring evaluation, verification checks, and genuine talent assessment. Redistribution or commercial resale of candidate profiles is strictly prohibited.</li>
+                </ul>
+
+                <br><h3>4. Acceptable Use & Professional Confidentiality</h3>
+                <p>Users agree not to misuse the platform by uploading fraudulent certifications, impersonating individuals, or deploying malicious scripts. In alignment with professional technical standards, all data processed on this platform is treated with elite operational loyalty and strict technical confidentiality.</p>
+
+                <br><h3>5. Limitation of Liability</h3>
+                <p>SOZYN acts as an intermediary secure data infrastructure. While we enforce rigid data verification checks, the ultimate hiring decisions, employment contractual obligations, and independent background conclusions remain the sole responsibility of the interacting Candidate and Employer.</p>
+            </div>
+
+            <!-- PRIVACY POLICY SECTION -->
+            <div id="privacy" class="policy-section" style="display:none;" data-key-html="main.page_privacy_html">
+                <h1>Privacy Policy</h1>
+                <p><strong>Effective Date:</strong> July 2026</p><br>
+                <p>At SOZYN, we respect your data privacy and are fiercely committed to protecting your personally identifiable information (PII). This Privacy Policy outlines how our web portal collects, structures, secures, and controls access to your data portfolio.</p>
+                
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+                <br><h3>1. Information Architecture (What We Collect)</h3>
+                <p>To deliver a highly functional pre-verified background screening suite, we collect the following structured information directly from Candidates:</p>
+                <ul>
+                    <li><strong>Identity & Personal Data:</strong> Full legal name, contact channels (email, phone number), and location parameters.</li>
+                    <li><strong>Employment History:</strong> Granular details of previous employment tenures, exact corporate roles, operational backgrounds, and structural references.</li>
+                    <li><strong>Academic & Professional Credentials:</strong> Degrees, academic institute details, technical licenses, and professional certifications.</li>
+                </ul>
+
+               <br> <h3>2. Data Isolation & Purpose-Driven Processing</h3>
+                <p>Your data is processed <strong>strictly for verification, credential validation, and background screening purposes</strong>. We do not engage in behavioral advertisement targeting, data-broker leasing, or public profile indexing. Your data remains isolated within our encrypted database environment until explicitly queried by a legitimate stakeholder.</p>
+
+              <br>  <h3>3. The Paywall Access Model</h3>
+                <p>To prevent bulk corporate data harvesting and maintain deep candidate security, your detailed profile is gated behind a payment wall. Only verified Employers who have completed a minimal transactional payment gain access to view your full history, uploaded certificates, and associated verification comments.</p>
+
+              <br>  <h3>4. Candidate Rights & Data Sovereignty</h3>
+                <p>In compliance with modern data principles, you have full control over your footprint:</p>
+                <ul>
+                    <li><strong>Right to Rectification:</strong> You maintain continuous, solo user rights to modify or correct inaccurate fields within your professional asset pool.</li>
+                    <li><strong>Data Minimization:</strong> When background comments or validation metrics are applied, only the necessary factual conclusions are surfaced to paid evaluators, maintaining clear privacy boundaries.</li>
+                </ul>
+
+              <br>  <h3>5. Information Security Controls</h3>
+                <p>We deploy robust digital security protocols to prevent unauthorized access, loss, or alteration of your uploaded documentation. Access logs are strictly monitored, ensuring that who viewed your profile, when it was unlocked, and the purpose of the query are tracked and secure.</p>
+            </div>
+        </div>
+    
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <h2 class="footer-logo" data-key="main.footer_logo_text">SOZYN</h2>
+                
+                <p data-key="main.footer_tagline">SOZYN is a service-based platform providing organizations real-time data to ensure seamless background checks and employee onboarding across India.</p><div class="social-icons">
+                    <a href="#" target="_blank" class="icon-link" data-key="main.footer_linkedin_url" data-key-attr="href"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.tinyurl.com/sozyninsta" target="_blank" class="icon-link" data-key="main.footer_instagram_url" data-key-attr="href"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@sozynLLP" target="_blank" class="icon-link" data-key="main.footer_youtube_url" data-key-attr="href"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.x.com/mysozyn" target="_blank" class="icon-link" data-key="main.footer_x_url" data-key-attr="href"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-right" data-key-html="main.footer_contact_html">
+                <h4>Contact:</h4><br>
+                <p>SOZYN LLP<br>Lakshmi Nagar, Proddatur, A.P, India</p><p>Email: info@sozyn.co.in</p><p>LLPIN# ACX-5370</p>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="last-updated" id="lastUpdatedBtn" style="cursor:pointer;">Last update: 19-June-2026</p>
+            <p data-key="main.footer_copyright">© 2026 SOZYN LLP</p>
+            <div class="policy-links">
+                <a href="#" onclick="showPolicy(event,'terms')">Terms of Use</a>
+                <a href="#" onclick="showPolicy(event,'privacy')">   Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="updates-popup" id="updatesPopup" style="position:fixed; top:80px; right:24px; width:320px; max-height:65vh; background:#fff; color:#26313d; border-radius:12px; box-shadow:0 20px 50px rgba(10,25,45,.3); z-index:2000; display:none; flex-direction:column; overflow:hidden;">
+        <div style="padding:14px 18px; background:var(--cap-dark-blue); color:#fff; display:flex; justify-content:space-between; align-items:center;">
+            <span>Updates</span><i class="fas fa-xmark" id="closeUpdates" style="cursor:pointer;"></i>
+        </div>
+        <div id="updatesBody" style="overflow-y:auto; padding:6px 0; font-size:0.85rem;"></div>
+    </div>
+    
+    <script>
+    function hideAll() {
+        const ids = ["main-content", "policy-content", "services-content", "founder-message-content", "overview-content", "blog-content", "pricing-content"];
+        ids.forEach(id => document.getElementById(id).style.display = "none");
+   
+    }
+    
+    function goHome() { hideAll(); document.getElementById("main-content").style.display = "block"; window.scrollTo(0,0); }
+    function showServices(e) { e.preventDefault(); hideAll(); document.getElementById("services-content").style.display = "block"; }
+    function showPricing(e) { e.preventDefault(); hideAll(); document.getElementById("pricing-content").style.display = "block"; }
+    function showOverview(e) { e.preventDefault(); hideAll(); document.getElementById("overview-content").style.display = "block"; }
+    function showFounderMessage(e) { e.preventDefault(); hideAll(); document.getElementById("founder-message-content").style.display = "block"; }
+    function showBlog(e) { e.preventDefault(); hideAll(); document.getElementById("blog-content").style.display = "block"; }
+       
+    
+    function showPolicy(e, policyId) {
+        e.preventDefault(); hideAll();
+        document.getElementById("policy-content").style.display = "block";
+        document.querySelectorAll(".policy-section").forEach(s => s.style.display = "none");
+        document.getElementById(policyId).style.display = "block";
+        
+    }
+    
+    function switchPricing(type, e) {
+        ['jobseekers','employers','wynd','jobway','moonspy'].forEach(id => {
+            document.getElementById(id).style.display = (id === type) ? 'block' : 'none';
+        });
+        document.querySelectorAll(".pricing-tab").forEach(t => t.classList.remove("active"));
+        e.target.classList.add("active");
+    }
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navList = document.getElementById('nav-list');
+    menuBtn.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        // Change icon from bars to X
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+    function goHome() {
+    document.querySelectorAll('main > div').forEach(div => {
+        div.style.display = 'none';
+    });
+
+    document.getElementById("main-content").style.display = "block";
+ 
+    navList.classList.remove("active");
+    window.scrollTo(0, 0);
+}
+    navList.classList.remove('active')
+
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', (e) => {
+
+
+        if (link.closest('.dropdown')) return;
+
+        const navList = document.getElementById('nav-list');
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const icon = menuBtn.querySelector('i');
+
+        if (navList.classList.contains('active')) {
+            navList.classList.remove('active');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+});
+
+function handleNavClick(event, callback) {
+    event.preventDefault();
+
+    // Run page function
+    callback(event);
+
+    const navList = document.getElementById('nav-list');
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const icon = menuBtn.querySelector('i');
+
+    // Close mobile menu
+    navList.classList.remove('active');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+
+    // Close dropdown
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+}
+    
+function toggleAboutMenu(event) {
+    if (window.innerWidth > 992) return; // 👈 ignore on desktop
+
+    event.preventDefault();
+
+    const dropdown = event.target.closest('.dropdown');
+    dropdown.classList.toggle('open');
+}
+</script>
+    
+<div id="newsletter-popup" class="popup-box">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h3><i class="fas fa-envelope"></i> Subscribe to Newsletter</h3>
+    <p>Stay updated with our latest news.</p>
+<form onsubmit="subscribe(event)">
+    <input type="text" id="nameInput" placeholder="Full name" required>
+    <input type="email" id="emailInput" placeholder="Enter your email" required>
+    <select id="genderInput" required>
+        <option value="" disabled selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        <option value="prefer_not_to_say">Prefer not to say</option>
+    </select>
+    <select id="typeInput" required>
+        <option value="" disabled selected>I am a...</option>
+        <option value="jobseeker">Jobseeker</option>
+        <option value="organization">Organization</option>
+    </select>
+    <input type="text" id="designationInput" placeholder="Designation (e.g. HR Manager, Student)">
+    <button type="submit">Subscribe</button>
+</form>
+
+<p id="successMsg" style="display:none; color:green; margin-top:10px;">
+    🎉 Thanks for subscribing!
+</p>
+<style>
+.popup-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 9999;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    display: none;
+}
+
+.popup-box.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-box h3 {
+    margin-bottom: 8px;
+    color: #003057;
+}
+
+.popup-box p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.popup-box input, .popup-box select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: #fff;
+    color: #333;
+}
+
+.popup-box button {
+    width: 100%;
+    padding: 10px;
+    background: #0070ad;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+</style>
+<style>
+/* ===========================
+   MOBILE FOOTER FIX
+=========================== */
+
+@media (max-width:768px){
+
+.footer-top{
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
+    align-items:start;
+}
+
+.footer-left,
+.footer-right{
+    width:100%;
+}
+
+.footer-logo{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.footer-left p,
+.footer-right p{
+    font-size:0.95rem;
+    line-height:1.8;
+}
+
+.social-icons{
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.footer-bottom{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+    padding:20px;
+}
+
+.policy-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.policy-links a{
+    margin:0;
+}
+
+footer{
+    padding-top:35px;
+}
+
+}
+</style>
+<script>
+function subscribe(e) {
+    e.preventDefault();
+
+    const successMsg = document.getElementById("successMsg");
+    const fullName = document.getElementById("nameInput").value;
+    const email = document.getElementById("emailInput").value;
+    const gender = document.getElementById("genderInput").value;
+    const subscriberType = document.getElementById("typeInput").value;
+    const designation = document.getElementById("designationInput").value;
+
+    const params = new URLSearchParams({
+        full_name: fullName,
+        email: email,
+        gender: gender,
+        subscriber_type: subscriberType,
+        designation: designation
+    });
+
+    fetch("Registration/data/newsletter-subscribe.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: params.toString()
+    })
+    .then(r => r.json())
+    .then(data => {
+        document.querySelector("#newsletter-popup form").style.display = "none";
+        successMsg.style.display = "block";
+        successMsg.style.color = data.success ? "green" : "red";
+        successMsg.innerText = data.success ? ("🎉 " + data.message) : ("❌ " + data.message);
+        if (data.success) setTimeout(closePopup, 3000);
+    })
+    .catch(() => {
+        successMsg.style.display = "block";
+        successMsg.style.color = "red";
+        successMsg.innerText = "❌ Something went wrong!";
+    });
+}
+</script>
+<script>
+function closePopup() {
+    document.getElementById("newsletter-popup").style.display = "none";
+}
+</script>
+<script>
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.getElementById("newsletter-popup").classList.add("show");
+    }, 30000); // 30 seconds
+});
+</script>
+<script>
+let activePromoIndex = 0;
+const promoSlides = document.querySelectorAll('.promo-slide');
+const promoTabs = document.querySelectorAll('.promo-tab');
+const wrapperFrame = document.getElementById('marketingSlider');
+let promoInterval;
+const promoCycleTime = 5000;
+
+function displayPromoSlide(idx) {
+    promoSlides.forEach(s => s.classList.remove('active'));
+    promoTabs.forEach(t => t.classList.remove('active'));
+    
+    promoSlides[idx].classList.add('active');
+    promoTabs[idx].classList.add('active');
+    activePromoIndex = idx;
+}
+
+function advancePromoSlide() {
+    let targetIdx = (activePromoIndex + 1) % promoSlides.length;
+    displayPromoSlide(targetIdx);
+}
+
+function switchPromoSlide(idx) {
+    displayPromoSlide(idx);
+    renewPromoTimer();
+}
+
+function beginPromoTimer() {
+    promoInterval = setInterval(advancePromoSlide, promoCycleTime);
+}
+
+function renewPromoTimer() {
+    clearInterval(promoInterval);
+    beginPromoTimer();
+}
+
+wrapperFrame.addEventListener('mouseenter', () => clearInterval(promoInterval));
+wrapperFrame.addEventListener('mouseleave', () => beginPromoTimer());
+
+beginPromoTimer();
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-98BRL04N4P');
+</script>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-98BRL04N4P"></script>
+<script>
+(function() {
+    const NAV_ACTIONS = {
+        'services': function(e){ handleNavClick(e, showServices); },
+        'pricing': function(e){ handleNavClick(e, showPricing); },
+        'about-overview': function(e){ handleNavClick(e, showOverview); },
+        'about-founder': function(e){ handleNavClick(e, showFounderMessage); },
+        'about-blog': function(e){ handleNavClick(e, showBlog); }
+    };
+    window.NAV_ACTIONS = NAV_ACTIONS;
+
+    function escHtml(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+    function navItemHtml(item){
+        if (item.type === 'dropdown') {
+            return '<li class="dropdown"><a href="#" onclick="toggleAboutMenu(event)">' + escHtml(item.label) + ' <span class="arrow">▾</span></a>' +
+                '<ul class="dropdown-menu">' + (item.children||[]).map(navItemHtml).join('') + '</ul></li>';
+        }
+        if (item.action) {
+            return '<li><a href="#" onclick="window.NAV_ACTIONS[\'' + item.action + '\'] && window.NAV_ACTIONS[\'' + item.action + '\'](event)">' + escHtml(item.label) + '</a></li>';
+        }
+        return '<li><a href="' + escHtml(item.url||'#') + '" target="_blank">' + escHtml(item.label) + '</a></li>';
+    }
+
+    function renderNavFromData(navArray){
+        if (!Array.isArray(navArray) || !navArray.length) return;
+        const navList = document.getElementById('nav-list');
+        if (!navList) return;
+        const mobileActions = navList.querySelector('.mobile-only-actions');
+        navList.innerHTML = navArray.map(navItemHtml).join('');
+        if (mobileActions) navList.appendChild(mobileActions);
+    }
+
+    function revealPage(){ document.documentElement.classList.add('content-ready'); }
+    // Safety net: never leave the page hidden more than 1.5s, even if the
+    // fetch is slow — better to briefly show default text than a blank page.
+    setTimeout(revealPage, 1500);
+
+    fetch('Registration/data/site-content-get.php?site=main')
+        .then(r => r.json())
+        .then(data => {
+            if (!data) { revealPage(); return; }
+
+            window._sozynLinks = window._sozynLinks || {};
+            if (data.values) {
+                Object.keys(data.values).forEach(key => {
+                    const val = data.values[key];
+                    if (val === undefined || val === null || val === '') return;
+                    if (key.endsWith('_href')) { window._sozynLinks[key] = val; return; }
+                    document.querySelectorAll('[data-key="' + key + '"]').forEach(el => {
+                        const attr = el.getAttribute('data-key-attr');
+                        if (attr) el.setAttribute(attr, val);
+                        else el.textContent = val;
+                    });
+                    document.querySelectorAll('[data-key-html="' + key + '"]').forEach(el => {
+                        el.innerHTML = val;
+                    });
+                });
+            }
+
+            if (data.nav) renderNavFromData(data.nav);
+
+            window._sozynChangelog = (data.meta && data.meta.changelog) || [];
+            if (data.meta && data.meta.last_updated) {
+                const d = new Date(data.meta.last_updated);
+                document.getElementById('lastUpdatedBtn').textContent = 'Last updated: ' + d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+            }
+            revealPage();
+        })
+        .catch(() => { revealPage(); });
+
+    document.getElementById('lastUpdatedBtn').addEventListener('click', function(){
+        const log = window._sozynChangelog || [];
+        const body = document.getElementById('updatesBody');
+        body.innerHTML = log.length ? log.slice().reverse().map(function(e){
+            return '<div style="padding:10px 18px; border-bottom:1px solid #eee;"><b style="font-size:0.8rem;">' +
+                new Date(e.date).toLocaleDateString() + '</b><ul style="margin:6px 0 0 16px;">' +
+                e.notes.map(function(n){ return '<li>' + escHtml(n) + '</li>'; }).join('') + '</ul></div>';
+        }).join('') : '<div style="padding:20px; text-align:center; color:#888;">No updates logged yet.</div>';
+        document.getElementById('updatesPopup').style.display = 'flex';
+    });
+    document.getElementById('closeUpdates').addEventListener('click', function(){
+        document.getElementById('updatesPopup').style.display = 'none';
+    });
+})();
+</script>
+
+<!-- ===================== SOZYN Live Editor ===================== -->
+<style>
+.sozyn-edit-mode [data-key]:not(script), .sozyn-edit-mode [data-key-html] {
+    outline: 1px dashed rgba(99,102,241,.55);
+    outline-offset: 2px;
+    border-radius: 3px;
+    min-height: 1em;
+    cursor: text;
+}
+.sozyn-edit-mode [data-key]:hover, .sozyn-edit-mode [data-key-html]:hover,
+.sozyn-edit-mode [data-key]:focus, .sozyn-edit-mode [data-key-html]:focus {
+    outline: 2px solid #6366f1;
+    background: rgba(99,102,241,.06);
+}
+.sozyn-edit-mode [data-href-key] { position: relative; }
+.sozyn-edit-mode [data-href-key]::after {
+    content: "🔗";
+    position: absolute;
+    top: -10px; right: -10px;
+    background: #fff;
+    border: 2px solid #6366f1;
+    border-radius: 50%;
+    width: 22px; height: 22px;
+    font-size: 11px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+.sozyn-edit-mode img[data-key-attr="src"] { cursor: pointer; }
+.sozyn-edit-mode img[data-key-attr="src"]:hover { outline: 2px solid #6366f1; }
+
+#sozynEditToggle {
+    position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+    background: #6366f1; color: #fff; border: none; border-radius: 30px;
+    padding: 12px 20px; font-weight: 600; font-size: .9rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3); cursor: pointer;
+    display: none; align-items: center; gap: 8px;
+}
+#sozynEditToggle.sozyn-visible { display: inline-flex; }
+#sozynEditToggle.sozyn-active { background: #26313d; }
+
+#sozynEditBar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998;
+    background: #1c2430; color: #fff; padding: 12px 20px;
+    display: none; align-items: center; justify-content: space-between;
+    box-shadow: 0 -6px 20px rgba(0,0,0,.3); font-size: .9rem;
+}
+#sozynEditBar.sozyn-visible { display: flex; }
+#sozynEditBar .sozyn-actions { display: flex; gap: 10px; align-items: center; }
+#sozynEditBar button { border: none; border-radius: 6px; padding: 8px 16px; font-weight: 600; cursor: pointer; }
+#sozynSaveBtn { background: #22c55e; color: #063; }
+#sozynDiscardBtn { background: #3a4453; color: #fff; }
+#sozynLogoutBtn { background: transparent; color: #aab3c0; text-decoration: underline; }
+#sozynToast {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background: #1c2430; color: #fff; padding: 12px 22px; border-radius: 8px;
+    z-index: 10000; font-size: .9rem; box-shadow: 0 8px 24px rgba(0,0,0,.3);
+    display: none;
+}
+</style>
+
+<button id="sozynEditToggle" type="button">✎ Edit Page</button>
+<div id="sozynEditBar">
+    <span id="sozynChangeCount">0 unsaved changes</span>
+    <div class="sozyn-actions">
+        <button id="sozynDiscardBtn" type="button">Discard</button>
+        <button id="sozynSaveBtn" type="button">Save Changes</button>
+        <button id="sozynLogoutBtn" type="button">Log out of editor</button>
+    </div>
+</div>
+<div id="sozynToast"></div>
+
+<script>
+(function(){
+    var SITE = 'main';
+    var pending = {};       // key -> new value (text/html/href/src)
+    var editModeOn = false;
+    var isAdmin = false;
+
+    var toggleBtn = document.getElementById('sozynEditToggle');
+    var bar = document.getElementById('sozynEditBar');
+    var countLabel = document.getElementById('sozynChangeCount');
+    var toast = document.getElementById('sozynToast');
+
+    function showToast(msg){
+        toast.textContent = msg;
+        toast.style.display = 'block';
+        setTimeout(function(){ toast.style.display = 'none'; }, 2600);
+    }
+
+    function updateCount(){
+        var n = Object.keys(pending).length;
+        countLabel.textContent = n + (n === 1 ? ' unsaved change' : ' unsaved changes');
+    }
+
+    function markPending(key, value){
+        pending[key] = value;
+        updateCount();
+    }
+
+    function enterEditMode(){
+        editModeOn = true;
+        document.body.classList.add('sozyn-edit-mode');
+        toggleBtn.classList.add('sozyn-active');
+        toggleBtn.textContent = '✕ Exit Edit Mode';
+        bar.classList.add('sozyn-visible');
+
+        document.querySelectorAll('[data-key]').forEach(function(el){
+            if (el.hasAttribute('data-key-attr')) return; // handled via click (images etc.)
+            el.setAttribute('contenteditable', 'true');
+            el.addEventListener('input', onTextEdit);
+        });
+        document.querySelectorAll('[data-key-html]').forEach(function(el){
+            el.setAttribute('contenteditable', 'true');
+            el.addEventListener('input', onHtmlEdit);
+        });
+        document.querySelectorAll('img[data-key][data-key-attr]').forEach(function(el){
+            el.addEventListener('click', onImageClick);
+        });
+        document.querySelectorAll('[data-href-key]').forEach(function(el){
+            el.addEventListener('click', onLinkBadgeClick, true);
+        });
+    }
+
+    function exitEditMode(){
+        editModeOn = false;
+        document.body.classList.remove('sozyn-edit-mode');
+        toggleBtn.classList.remove('sozyn-active');
+        toggleBtn.textContent = '✎ Edit Page';
+        bar.classList.remove('sozyn-visible');
+
+        document.querySelectorAll('[contenteditable="true"]').forEach(function(el){
+            el.removeAttribute('contenteditable');
+        });
+        document.querySelectorAll('img[data-key][data-key-attr]').forEach(function(el){
+            el.removeEventListener('click', onImageClick);
+        });
+        document.querySelectorAll('[data-href-key]').forEach(function(el){
+            el.removeEventListener('click', onLinkBadgeClick, true);
+        });
+    }
+
+    function onTextEdit(e){
+        var el = e.currentTarget;
+        markPending(el.getAttribute('data-key'), el.textContent);
+    }
+    function onHtmlEdit(e){
+        var el = e.currentTarget;
+        markPending(el.getAttribute('data-key-html'), el.innerHTML);
+    }
+    function onImageClick(e){
+        e.preventDefault(); e.stopPropagation();
+        var el = e.currentTarget;
+        var current = el.getAttribute('src');
+        var url = window.prompt('New image URL for this image:', current);
+        if (url && url.trim()) {
+            el.setAttribute('src', url.trim());
+            markPending(el.getAttribute('data-key'), url.trim());
+        }
+    }
+    function onLinkBadgeClick(e){
+        // Only react when the click lands on the ::after badge corner (top-right 22x22px).
+        var el = e.currentTarget;
+        var r = el.getBoundingClientRect();
+        var nearBadge = (e.clientX > r.right - 26 && e.clientY < r.top + 16);
+        if (!nearBadge) return; // let normal (disabled) click pass through
+        e.preventDefault(); e.stopPropagation();
+        var key = el.getAttribute('data-href-key');
+        var current = (window._sozynLinks && window._sozynLinks[key]) || el.getAttribute('data-default-href');
+        var url = window.prompt('New link/URL for this button:', current);
+        if (url && url.trim()) {
+            window._sozynLinks = window._sozynLinks || {};
+            window._sozynLinks[key] = url.trim();
+            markPending(key, url.trim());
+            showToast('Link updated (not yet saved)');
+        }
+    }
+    // Prevent normal button clicks (navigation) while in edit mode, except the link badge.
+    document.addEventListener('click', function(e){
+        if (!editModeOn) return;
+        var target = e.target.closest('[data-href-key]');
+        if (target) {
+            var r = target.getBoundingClientRect();
+            var nearBadge = (e.clientX > r.right - 26 && e.clientY < r.top + 16);
+            if (!nearBadge) { e.preventDefault(); e.stopPropagation(); }
+        }
+    }, true);
+
+    toggleBtn.addEventListener('click', function(){
+        if (editModeOn) exitEditMode(); else enterEditMode();
+    });
+
+    document.getElementById('sozynDiscardBtn').addEventListener('click', function(){
+        if (!confirm('Discard all unsaved changes and reload the page?')) return;
+        window.location.reload();
+    });
+
+    document.getElementById('sozynLogoutBtn').addEventListener('click', function(){
+        fetch('Registration/data/admin-logout.php', { credentials: 'same-origin' })
+            .then(function(){ window.location.reload(); });
+    });
+
+    document.getElementById('sozynSaveBtn').addEventListener('click', function(){
+        var n = Object.keys(pending).length;
+        if (!n) { showToast('Nothing to save.'); return; }
+        var note = window.prompt('Optional short note describing this change (for the changelog):', '');
+        fetch('Registration/data/site-content-set.php', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ site: SITE, changes: pending, note: note || '' })
+        })
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+            if (data && data.success) {
+                showToast('Saved ' + n + ' change(s).');
+                pending = {};
+                updateCount();
+            } else {
+                showToast('Save failed: ' + (data && data.error ? data.error : 'unknown error'));
+            }
+        })
+        .catch(function(){ showToast('Save failed: network error.'); });
+    });
+
+    // Only reveal the editor UI if this visitor has an active admin session.
+    fetch('Registration/data/admin-check.php', { credentials: 'same-origin' })
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+            isAdmin = !!(data && data.isAdmin);
+            if (isAdmin) toggleBtn.classList.add('sozyn-visible');
+        })
+        .catch(function(){});
+
+    window.sozynGo = function(el){
+        if (editModeOn) return; // clicks are intercepted separately in edit mode
+        var key = el.getAttribute('data-href-key');
+        var url = (window._sozynLinks && window._sozynLinks[key]) || el.getAttribute('data-default-href');
+        if (url) window.open(url, '_blank');
+    };
+})();
+</script>
+<!-- =================== end SOZYN Live Editor =================== -->
+
+    
+<script>
+window.addEventListener('load', function () {
+ const sections = {services: showServices, pricing: showPricing, overview: showOverview, message: showFounderMessage, blog: showBlog};
+ const section = new URLSearchParams(window.location.search).get('section');
+ if (Object.prototype.hasOwnProperty.call(sections, section)) sections[section]({preventDefault:function(){}});
+});
+</script>
+</body>
+    </html>
